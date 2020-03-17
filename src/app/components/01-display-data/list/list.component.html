@@ -1,0 +1,28 @@
+<h3>01-display-data</h3>
+<h5>
+  Number of items: <small>{{ items.length }}</small>
+</h5>
+<ul>
+  <li>Action {{ item.action }}</li>
+  <li>Priority {{ item.priority }}</li>
+  <li>Estimate Hours {{ item.estHours }}</li>
+  <li>Actual Hours {{ item.actHours }}</li>
+  <li>Done {{ item.done }}</li>
+</ul>
+
+<div class="panel">
+  <div class="panel-heading">
+    <p>Item</p>
+  </div>
+  <ul>
+    <li *ngFor="let it of items">
+      <ul>
+        <li>{{ it.action }}</li>
+        <li>{{ it.priority }}</li>
+        <li>{{ it.estHours }}</li>
+        <li>{{ it.actHours }}</li>
+        <li>{{ it.done }}</li>
+      </ul>
+    </li>
+  </ul>
+</div>
